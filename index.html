@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: GRAY;
+      --secondary: GRAY;
+      --background: #f8f9fa;
+      --card: #ffffff;
+      --text: #2e2e2e;
+      --muted: #6c757d;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header,
+    footer {
+      background: linear-gradient(90deg, var(--secondary), var(--primary));
+      color: var(--card);
+      text-align: center;
+    }
+
+    header h1,
+    footer p {
+      margin: 0;
+      padding: 1.2rem 0;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .project-wrapper {
+      background-color: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .project-gallery img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(34, 34, 34, 0.4);
+    }
+
+    .image-frame {
+      width: 100%;
+      height: 250px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #f8f9fa;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 5px;
+    }
+
+    .image-frame:hover .project-image {
+      transform: scale(1.05);
+    }
+
+    .card {
+      background-color: var(--card);
+      border: 1px solid #dee2e6;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      margin-top: 20px;
+      padding: 1.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .text-center p.lead {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--primary);
+      color: var(--card);
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    a.btn:hover {
+      background-color: var(--secondary);
+      color: var(--card);
+    }
+  </style>
+</style>
+</head>
+
+<body>
+  <header class="py-4 text-center">
+    <h1>Andrew's E-Portfolio</h1>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2 class="section-title text-center">About Me</h2>
+      <div class="row justify-content-center text-center">
+        <div class="col-md-4">
+          <img src="images/me.jpg.jpeg" alt="My Logo" class="profile-img">
+        </div>
+        <div class="col-md-8">
+          <p class="lead">Hello ! I am Andrew from ITE college east, currently studying in IT Applications & Development. From the use of technology, I was intrigued by how programmers use different types of code to solve real-world problems. My ultimate goal is to pursue a career in the IT industry, with the long term goal of becoming a software engineer.
+
+          I strongly believe that I possess the foundational knowledge and skills necessary for coding, along with strong communication abilities. These attributes, combined with my passion and dedication, will drive me to toward achieving my ambitions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title text-center">Passion Projects</h2>
+
+      <div class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4>Passion Project 1</h4>
+            <p>Throughout the course in IT application development, I have created an ecommerce website that is both frontend and backend development full stack with the use of HTML, CSS, Javascript, PHP and SQL.</p>
+            <p>These experiences played a crucial role in helping me build a strong foundation in coding and have prepared me well for the modules offered in NYP's Information Technology course. Through this project, I developed the ability to think both creatively and analytically, effectively connecting design with functionality while gaining a deeper understanding of full-stack development.</p>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="project-wrapper">
+              <div class="project-gallery">
+                <img src="images/project1 (4).png" alt="Project 1 Image 1">
+                <img src="images/project1 (2).png" alt="Project 1 Image 2">
+                <img src="images/project1 (3).png" alt="Project 1 Image 3">
+                <img src="images/project1 (1).png" alt="Project 1 Image 4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4>Passion Project 2</h4>
+            <p>Another challenge I set for myself was creating a Python script to analyze a specific time period of any given region contained in a CSV data file. The script allows users to make valuable insights by making selections and processing the data using selected regions and periods, further enhancing my skills in working with data, analysis, and structured datasets using Python.<br><br>
+
+            The experience taught me how to effectively play with data in Python, including reading and modifying CSV files, using conditional statements, and presenting discoveries clearly and efficiently. It has also shown me the actual applications of Python in data analysis, which is a skill that is highly needed in any Information Technology field. I gained the ability through this project to believe in writing functioning, productive code and develop a problem-solving mindset—abilities that are also strongly relevant to the data management, software development, and programming modules offered in NYP's Information Technology course
+            </p>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="project-wrapper">
+              <div class="project-gallery">
+                <img src="images/project2 (2).png" alt="Project 2 Image 1">
+                <img src="images/project2 (1).png" alt="Project 2 Image 2">
+                <img src="images/project2 (3).png" alt="Project 2 Image 3">
+                <img src="images/project2 (4).png" alt="Project 2 Image 4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-4">
+            <h4>Passion Project 3</h4>
+            <p>Another project I worked on involved UI/UX design in web development, where I focused on creating user-friendly and visually appealing interfaces. This experience taught me the importance of understanding user behavior, wireframing, prototyping, and applying design principles to enhance the overall usability and accessibility of a website. It also helped me recognize how good design can significantly improve user engagement and satisfaction. This skill is highly relevant to the Information Technology course at NYP, as it complements technical development by ensuring that digital solutions are not only functional but also intuitive and user-centered.</p>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="project-wrapper">
+              <div class="project-gallery">
+                <img src="images/PROJECT3 (3).png" alt="Project 3 Image 1">
+                <img src="images/PROJECT3 (2).png" alt="Project 3 Image 2">
+                <img src="images/PROJECT3 (1).png" alt="Project 3 Image 3">
+                <img src="images/PROJECT3 (4).png" alt="Project 3 Image 4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="leadership">
+      <h2 class="section-title text-center">Leadership Roles and Hobby Experiences</h2>
+       <div class="project-wrapper mb-4 p-3">
+        <div class="d-grid gap-3" style="grid-template-columns: repeat(2, 1fr); display: grid;">
+          <img src="images/art photo.png" alt="Leadership Image 1" class="w-100 rounded small-img">
+          <img src="images/class photo.png" alt="Leadership Image 2" class="w-100 rounded small-img">
+        </div>
+    </div>
+        <div class="text-center mb-4">
+          <img src="images/XAUUSD_2025-07-13_20-36-28.png" alt="Leadership Highlight" class="img-fluid rounded" style="max-height: 300px; object-fit: cover;"><br><br>
+        <div>
+
+
+      <div class="card p-4">
+        <p>During my secondary school years, I took on several roles that helped shape my personal and academic development. As a peer support leader and class representative, I developed strong communication, leadership, and teamwork skills. These positions taught me how to listen actively, resolve conflicts, and represent others effectively—skills that are crucial when working on collaborative IT projects with other members.<br><br>
+
+        During my cca experience, my cca enhanced my ability to convey information clearly and creatively, which is especially relevant in todays digital world where IT and media often intersect. It also sparked an interest in how technology is used to inform and connect people and can be used in everyday lifes.<br><br>
+
+        In my free time, I was especially fascinated by trading, and through this, I got exposed to key IT-related skills such as data analysis as well as the use of online platforms such as MetaTrader 5. Through trading, I became more detail-oriented & developed critical thinking skills and learned about the importance of being well-informed through continuous analysis of global news and market trends. In addition to technical knowledge, trading taught me valuable skills of emotional control and self-discipline. I learned to remain calm in the face of failure and persevere which are skills just as valuable in Information Technology, especially when debugging faulty code or solving complicated issues. No matter how frustrating the situation is, I have learned not to give up.
+        </p>
+      </div>
+    </section>
+
+    <section id="volunteering">
+      <h2 class="section-title text-center">Volunteering Experiences</h2>
+
+      <div class="text-center mb-4">
+        <img src="images/VIA PROJECT.jpeg" alt="Volunteering Image" class="img-fluid rounded"  width="400px" height="400px">
+    </div>
+      <div class="card p-4">
+        <p>One of the volunteering Experiences I had was giving goodie bags and gifts to the janitors around my school. This taught me the importance of appreciation and kindness toward everyone, regardless of their role. It showed me how small gestures can brighten someones day and make them feel valued. This experience also helped me develop empathy, gratitude, and a greater sense of community within the school environment.<br><br>Moreover, Participating in the beach cleanup at East Coast Park for my VIA project taught me the importance of environmental responsibility and the impact of individual actions on our natural surroundings. It made me more aware of pollution issues and motivated me to be more mindful of waste in my daily life. This experience also strengthened my teamwork skills and deepened my commitment to contributing positively to the community and the environment. <BR><BR><BR> ps: im the one behind taking the photo</p>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2 class="section-title text-center">Achievements</h2>
+        <div class="project-wrapper mb-4">
+        <div class="project-gallery">
+            <img src="images/CERTIFICATES (1).png" alt="Achievement 1" width="400px" height="400px">
+            <img src="images/CERTIFICATES (2).png" alt="Achievement 2" width="400px" height="400px">
+            <img src="images/CERTIFICATES (3).png" alt="Achievement 2" width="400px" height="400px">
+            <img src="images/CERTIFICATES (4).png" alt="Achievement 2" >
+            <img src="images/SEC SCH CERTIFICATES.jpeg" alt="Achievement 2" >
+    </div>
+  </div>
+
+
+      <div class="card p-4">
+        <p>I have also completed several industry-recognized certifications that strengthened my technical foundation. The Google Data Analytics Certification taught me how to analyze and visualize data using tools like SQL and Tableau. The Web Developer Certification enhanced my skills in HTML, CSS, and JavaScript for building responsive websites. Through the Automation Essentials Certification, I learned to automate tasks using Python and RPA tools. Lastly, the Foundations in AI Certification introduced me to key AI concepts and real-world applications.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="py-4 text-center">
+    <p>&copy; Andrew's E-Portfolio | Early Admission Exercise</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
